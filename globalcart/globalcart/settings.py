@@ -21,13 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-*l(*jf9059bgbdjol6o*)ck)gq!#**oj5p+o_zttat(7ls_7!g'
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-*l(*jf9059bgbdjol6o*)ck)gq!#**oj5p+o_zttat(7ls_7!g'
+# SECRET_KEY = config('SECRET_KEY')
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
+# DEBUG = config('DEBUG', default=False, cast=bool)
 
 
 ALLOWED_HOSTS = ['django-awsglobalcart64-env.eba-jr3b36dr.us-west-2.elasticbeanstalk.com']
@@ -144,8 +145,14 @@ MESSAGE_TAGS = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT',cast=int)
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS',cast=bool)
+# EMAIL_HOST = config('EMAIL_HOST')
+# EMAIL_PORT = config('EMAIL_PORT',cast=int)
+# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+# EMAIL_USE_TLS = config('EMAIL_USE_TLS',cast=bool)
+
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT =587
+EMAIL_HOST_USER='globalcart79@gmail.com'
+EMAIL_HOST_PASSWORD='xllotyucgtlxljyx'
+EMAIL_USE_TLS=True
